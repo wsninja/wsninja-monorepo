@@ -1,0 +1,61 @@
+.Switch {
+	position: relative;
+	width: 48px;
+	height: 24px;
+
+	&__checkbox {
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+
+	&--small {
+		width: 32px;
+		height: 16px;
+	}
+
+	&__label {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		display: block;
+		width: 48px;
+		height: 24px;
+		border: 1px solid var(--color-charcoal);
+		right: 0;
+		border-radius: 12px;
+		overflow: hidden;
+		background: var(--color-white);
+
+		&--checked {
+			background: var(--color-primary);
+		}
+
+		&--small {
+			width: 32px;
+			height: 16px;
+		}
+
+		&-inner {
+			background: var(--color-primary);
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			border-radius: 12px;
+			top: -1px;
+			left: 0;
+			transition: 0.5s ease all;
+
+			&--checked {
+				right: 0;
+				left: auto;
+				background: var(--color-white);
+			}
+
+			&--small {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+}

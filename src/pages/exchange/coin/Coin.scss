@@ -1,0 +1,102 @@
+.Coin {
+	$self: &;
+
+	&__label {
+		font-weight: 600;
+		font-size: 14px;
+		color: var(--color-gray);
+		margin-bottom: 4px;
+	}
+
+	&__wrapper {
+		background: var(--color-ultra-gray);
+		border-radius: 5px;
+		padding: 8px;
+
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			color: var(--color-gray);
+			font-weight: 500;
+			font-size: 14px;
+			margin-bottom: 4px;
+
+			&--dark {
+				color: var(--color-white);
+			}
+		}
+
+		&-bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&-selector {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+
+				&-image {
+					width: 32px;
+					height: 32px;
+					object-fit: cover;
+					border-radius: 16px;
+					margin-right: 6px;
+					visibility: hidden;
+				}
+
+				&-unit {
+					font-weight: 500;
+					font-size: 15px;
+					color: var(--color-charcoal);
+					margin-right: 6px;
+				}
+
+				&-icon {
+					color: var(--color-gray);
+				}
+			}
+
+			&-value {
+				font-weight: 500;
+				font-size: 20px;
+				color: var(--color-charcoal);
+			}
+
+			&-input {
+				&-wrapper {
+					width: 100%;
+				}
+
+				width: inherit;
+				background: none;
+				text-align: right;
+				outline: none;
+				border: none;
+				padding: 0;
+				font-weight: 500;
+				font-size: 20px;
+				color: var(--color-charcoal);
+			}
+		}
+	}
+
+	&--dark {
+		color: var(--color-white);
+
+		#{$self}__label {
+			color: var(--color-white);
+		}
+
+		#{$self}__wrapper {
+			background: var(--color-charcoal);
+
+			&-bottom-selector-unit,
+			&-bottom-value,
+			&-bottom-input {
+				color: var(--color-white);
+			}
+		}
+	}
+}

@@ -1,0 +1,163 @@
+.Settings {
+	$self: &;
+	padding: 32px 0;
+
+	&__download {
+		margin-right: 8px;
+	}
+
+	&__heading {
+		color: var(--color-primary);
+		font-size: 14px;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+
+	&__paragraph {
+		font-size: 12px;
+		color: var(--color-gray);
+		font-weight: 500;
+		margin-bottom: 32px;
+	}
+
+	&__input-group {
+		display: flex;
+		margin-bottom: 48px;
+
+		&-password {
+			flex: 1;
+			margin-right: 8px;
+		}
+	}
+
+	&__select {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	&__textarea {
+		width: 100%;
+		margin-bottom: 32px;
+		border-radius: 10px;
+		padding: 8px;
+	}
+
+	&__switch {
+		margin-top: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-label {
+			color: var(--color-black);
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+
+	&--dark {
+		background: var(--color-black);
+
+		#{$self}__paragraph {
+			color: var(--color-white);
+		}
+
+		#{$self}__textarea {
+			background: var(--color-charcoal);
+			color: var(--color-white);
+		}
+	}
+}
+
+.DesktopSettings {
+	$self: &;
+	display: grid;
+	place-items: center;
+	min-height: calc(100vh - 160px);
+
+	&__card {
+		background: var(--color-white);
+		padding: 32px 48px;
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+		max-width: 666px;
+		color: var(--color-black);
+		margin-top: 64px;
+	}
+
+	&__heading {
+		color: var(--color-primary);
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 16px;
+	}
+
+	&__paragraph {
+		color: var(--color-gray);
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 153.2%;
+		margin-bottom: 24px;
+	}
+
+	&__input-group {
+		display: flex;
+		margin-bottom: 48px;
+
+		&-password {
+			flex: 2;
+			margin-right: 8px;
+		}
+
+		&-btn {
+			flex: 1;
+		}
+	}
+
+	&__select {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	&__textarea {
+		width: 100%;
+		margin-bottom: 32px;
+		border-radius: 10px;
+		padding: 8px;
+	}
+
+	&__switch {
+		margin-top: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-label {
+			color: var(--color-black);
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+
+	&--dark {
+		#{$self}__card {
+			background: var(--color-black);
+		}
+
+		#{$self}__paragraph {
+			color: var(--color-white);
+		}
+
+		#{$self}__textarea {
+			color: var(--color-white);
+			background: var(--color-charcoal);
+		}
+
+		#{$self}__switch-label {
+			color: var(--color-white);
+		}
+	}
+}

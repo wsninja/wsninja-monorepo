@@ -1,0 +1,97 @@
+.Collectibles {
+   $self: &;
+
+   &__card {
+      background: var(--color-white);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      padding: 8px;
+      display: grid;
+      grid-template-columns: 48px auto;
+      grid-gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      &-img {
+         border-radius: 2px;
+      }
+   }
+
+   &--dark {
+      #{$self}__card {
+         background: var(--color-black);
+         color: var(--color-white);
+      }
+   }
+}
+
+.DesktopCollectibles {
+   $self: &;
+   display: grid;
+   grid-template-columns: 380px auto;
+   gap: 32px;
+
+   &__list {
+      max-height: 600px;
+      overflow: auto;
+   }
+
+   &__card {
+      background: var(--color-white);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      padding: 8px;
+      display: grid;
+      grid-template-columns: 48px auto;
+      grid-gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      &-img {
+         border-radius: 2px;
+      }
+   }
+
+   &__panel {
+      background: var(--color-white);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      padding: 24px;
+      position: relative;
+      min-height: 400px;
+      max-height: 600px;
+      overflow: auto;
+
+      &-filler {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+
+         &-text {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 175.7%;
+            color: var(--color-gray);
+         }
+      }
+   }
+
+   &--dark {
+      #{$self}__panel {
+         background: var(--color-black);
+
+         &-filler-text {
+            color: var(--color-white);
+         }
+      }
+
+      #{$self}__card {
+         background: var(--color-black);
+         color: var(--color-white);
+      }
+   }
+}

@@ -1,0 +1,112 @@
+.DownloadKey {
+   $self: &;
+
+   &__cta {
+      margin: 0 auto;
+      margin-top: 24px;
+      width: 220px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   &__heading {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      margin-bottom: 40px;
+      font-size: 20px;
+   }
+
+   &__list {
+      margin-bottom: 48px;
+      color: var(--color-gray);
+      text-align: justify;
+      padding-inline-start: 24px;
+
+      &-item {
+         &:not(:last-child) {
+            margin-bottom: 24px;
+         }
+      }
+   }
+
+   &__paragraph {
+      color: var(--color-gray);
+      margin-bottom: 28px;
+      text-align: justify;
+   }
+
+   &--dark {
+      color: var(--color-white);
+
+      #{$self}__paragraph,
+      #{$self}__list {
+         color: var(--color-white);
+      }
+   }
+}
+
+.DesktopDownloadKey {
+   $self: &;
+   display: grid;
+   place-items: center;
+   height: calc(100vh - 80px);
+
+   &__card {
+      background: var(--color-white);
+      padding: 32px 48px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      max-width: 666px;
+      text-align: center;
+      color: var(--color-black);
+   }
+
+   &__heading {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      margin-bottom: 48px;
+      font-size: 30px;
+   }
+
+   &__paragraph {
+      color: var(--color-gray);
+      text-align: justify;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 153.2%;
+      margin-bottom: 24px;
+   }
+
+   &__list {
+      margin-bottom: 64px;
+      color: var(--color-gray);
+      text-align: justify;
+      padding-inline-start: 24px;
+
+      &-item {
+         &:not(:last-child) {
+            margin-bottom: 24px;
+         }
+      }
+   }
+
+   &__cta {
+      width: 100%;
+   }
+
+   &--dark {
+      #{$self}__card {
+         background: var(--color-black);
+         color: var(--color-white);
+      }
+
+      #{$self}__paragraph {
+         color: var(--color-white);
+      }
+
+      #{$self}__list {
+         color: var(--color-white);
+      }
+   }
+}

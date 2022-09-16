@@ -1,0 +1,73 @@
+.Modal {
+   $self: &;
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   background: rgba(1, 1, 1, 0.7);
+   display: none;
+
+   &--open {
+      display: block;
+
+      &-desktop {
+         display: grid;
+         place-items: center;
+      }
+   }
+
+   &__body {
+      max-height: 60vh;
+      overflow-y: auto;
+   }
+
+   &__header {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-heading {
+         font-weight: 14px;
+         color: var(--color-charcoal);
+         font-weight: 500;
+      }
+
+      &-close {
+         cursor: pointer;
+      }
+   }
+
+   &__content {
+      background: var(--color-white);
+      padding: 16px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+   }
+
+   &--dark {
+      color: var(--color-white);
+
+      #{$self}__content {
+         background: var(--color-charcoal);
+      }
+
+      #{$self}__header-heading {
+         color: var(--color-primary);
+      }
+   }
+
+   &--desktop {
+      #{$self}__content {
+         min-width: 480px;
+         position: relative;
+         border-bottom-left-radius: 5px;
+         border-bottom-right-radius: 5px;
+      }
+   }
+}

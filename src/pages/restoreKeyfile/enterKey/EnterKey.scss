@@ -1,0 +1,22 @@
+.EnterKey {
+   position: relative;
+
+   &__textarea {
+      padding: 8px;
+      border: 1px solid var(--color-gray);
+      border-radius: 10px;
+      width: 100%;
+
+      &--dark {
+         background: var(--color-charcoal);
+         color: var(--color-white);
+         border-color: var(--color-gray);
+      }
+   }
+
+   &__paste-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+   }
+}

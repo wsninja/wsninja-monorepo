@@ -1,0 +1,73 @@
+.SendCoin {
+   $self: &;
+
+   &__header {
+      display: flex;
+      align-items: center;
+      height: 48px;
+      margin-bottom: 32px;
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--color-charcoal);
+
+      &-back {
+         cursor: pointer;
+         margin-right: 8px;
+      }
+   }
+
+   &__recipient {
+      margin-bottom: 20px;
+
+      &-paste {
+         color: var(--color-primary);
+         font-weight: 600;
+         font-size: 14px;
+         cursor: pointer;
+      }
+   }
+
+   &__amount {
+      &-unit {
+         color: var(--color-primary);
+         font-weight: 600;
+         font-size: 14px;
+         cursor: pointer;
+      }
+   }
+
+   &__conversion {
+      font-weight: 500;
+      font-size: 12px;
+      color: var(--color-gray);
+      margin-bottom: 20px;
+   }
+
+   &__cta {
+      display: block;
+      margin: 0 auto;
+      min-width: 220px;
+   }
+
+   &--dark {
+      color: var(--color-white);
+
+      #{$self}__header {
+         color: var(--color-white);
+      }
+
+      .InputGroup {
+         &__label {
+            color: var(--color-white);
+         }
+
+         &__wrapper--dark {
+            background: var(--color-black);
+         }
+
+         &__wrapper-input--dark {
+            background: var(--color-black);
+         }
+      }
+   }
+}

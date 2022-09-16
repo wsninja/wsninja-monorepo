@@ -1,0 +1,78 @@
+.Coin {
+	$self: &;
+	color: var(--color-charcoal);
+
+	&__header {
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+
+		&-left {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&-back {
+				margin-right: 8px;
+				cursor: pointer;
+			}
+
+			&-name {
+				font-weight: 500;
+				font-size: 18px;
+				margin-right: 4px;
+			}
+
+			&-image {
+				border-radius: 50%;
+				max-height: 64px;
+			}
+		}
+
+		&-right {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&-icon {
+				&:first-of-type {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+
+	&__details {
+		margin-bottom: 32px;
+		padding-left: 28px;
+
+		&-value {
+			font-weight: 500;
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
+
+		&-invested {
+			color: var(--color-gray);
+			font-weight: 500;
+			font-size: 14px;
+		}
+	}
+
+	&--dark {
+		color: var(--color-white);
+
+		#{$self}__details {
+			background: var(--color-black);
+			padding: 16px;
+		}
+
+		#{$self}__txns {
+			.TxnList__history-day-list-card {
+				background: var(--color-black);
+			}
+		}
+	}
+}

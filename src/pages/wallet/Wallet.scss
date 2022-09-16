@@ -1,0 +1,41 @@
+.Wallet {
+	$self: &;
+
+	&__header {
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+
+		&-actions {
+			display: flex;
+
+			&-icon {
+				&:not(:last-child) {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}
+
+.DesktopWallet {
+	$self: &;
+	padding-top: 80px;
+	padding-left: 80px;
+	padding-right: 80px;
+
+	&__header {
+		margin-bottom: 16px;
+		display: grid;
+		grid-template-columns: 380px auto;
+		gap: 32px;
+
+		&-coins {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+}

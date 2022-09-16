@@ -1,0 +1,15 @@
+.SocialMediaIcons {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	&__platform {
+		color: var(--color-white);
+		cursor: pointer;
+		background: url('../../assets/images/red-circle.svg');
+		width: 36px;
+		height: 36px;
+		display: grid;
+		place-items: center;
+	}
+}

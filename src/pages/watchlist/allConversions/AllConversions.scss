@@ -1,0 +1,70 @@
+.AllConversions {
+	$self: &;
+	background: var(--color-white);
+
+	&__header {
+		margin-bottom: 16px;
+
+		&-input {
+			width: 100%;
+			background: var(--color-ultra-gray);
+		}
+	}
+
+	&__list {
+		&-item {
+			padding: 4px 16px;
+			display: grid;
+			grid-template-columns: 108px auto 20px;
+			color: var(--color-black);
+			cursor: pointer;
+			user-select: none;
+
+			&-text {
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 20px;
+			}
+
+			&-icon {
+				cursor: pointer;
+			}
+
+			&-in {
+				background-color: var(--color-light-gray);
+			}
+
+			&-added {
+				color: var(--color-white);
+				background-color: var(--color-green);
+			}
+
+			&-removed {
+				color: var(--color-white);
+				background-color: var(--color-red);
+			}
+		}
+	}
+
+	&--dark {
+		background: var(--color-charcoal);
+
+		#{$self}__header {
+			&-top-icon {
+				color: var(--color-white);
+			}
+
+			&-input {
+				background: var(--color-charcoal);
+			}
+		}
+
+		#{$self}__list-item {
+			color: var(--color-white);
+
+			&-in {
+				color: var(--color-black);
+			}
+		}
+	}
+}

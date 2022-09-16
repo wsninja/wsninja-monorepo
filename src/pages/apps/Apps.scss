@@ -1,0 +1,161 @@
+.Apps {
+	$self: &;
+
+	&__header {
+		margin-bottom: 16px;
+		height: 50px;
+		align-items: center;
+		justify-content: space-between;
+		display: flex;
+
+		&-heading {
+			color: var(--color-primary);
+			font-weight: 500;
+			font-size: 14px;
+		}
+
+		&-select {
+			padding: 2px 12px;
+		}
+	}
+
+	&__list {
+		&-link {
+			text-decoration: none;
+		}
+
+		&-card {
+			background: var(--color-white);
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+			border-radius: 10px;
+			margin-bottom: 8px;
+			display: grid;
+			grid-template-columns: 48px auto;
+			padding: 8px;
+			grid-gap: 8px;
+
+			&-content {
+				font-weight: 500;
+
+				&-name {
+					color: var(--color-black);
+					margin-bottom: 10px;
+					font-size: 18px;
+				}
+
+				&-description {
+					color: var(--color-gray);
+					font-size: 12px;
+				}
+			}
+
+			&-img {
+				border-radius: 50%;
+			}
+		}
+	}
+
+	&--dark {
+		background: var(--color-charcoal);
+
+		#{$self}__list-card {
+			background: var(--color-black);
+
+			&-content-name,
+			&-content-description {
+				color: var(--color-white);
+			}
+		}
+	}
+}
+
+.DesktopApps {
+	$self: &;
+	padding: 64px 80px;
+
+	&__header {
+		margin-bottom: 16px;
+		height: 50px;
+		align-items: center;
+		justify-content: space-between;
+		display: flex;
+
+		&-heading {
+			color: var(--color-primary);
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		&-select {
+			padding: 2px 12px;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 24px;
+
+		&-link {
+			text-decoration: none;
+		}
+
+		&-card {
+			background: var(--color-white);
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+			border-radius: 10px;
+			padding: 16px;
+			cursor: pointer;
+			color: var(--color-black);
+			height: 100%;
+
+			&-top {
+				display: flex;
+				align-items: center;
+				margin-bottom: 16px;
+
+				&-name {
+					font-weight: 500;
+					font-size: 20px;
+				}
+
+				&-img {
+					border-radius: 50%;
+					margin-right: 24px;
+				}
+			}
+
+			&-description {
+				color: var(--color-gray);
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 125.7%;
+			}
+		}
+	}
+
+	&--dark {
+		#{$self}__header {
+			&-heading {
+				color: var(--color-white);
+			}
+
+			&-select {
+				background: transparent;
+				color: var(--color-white);
+			}
+		}
+
+		#{$self}__list {
+			&-card {
+				background: var(--color-black);
+				color: var(--color-white);
+
+				&-description {
+					color: var(--color-ultra-gray);
+				}
+			}
+		}
+	}
+}

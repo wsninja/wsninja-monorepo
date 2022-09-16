@@ -1,0 +1,254 @@
+.Watchlist {
+	$self: &;
+
+	&__header {
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 32px;
+
+		&-title {
+			color: var(--color-primary);
+			font-weight: 500;
+			font-size: 14px;
+		}
+
+		&-plus {
+			cursor: pointer;
+			color: var(--color-primary);
+		}
+	}
+
+	&__list {
+		&-card {
+			background: var(--color-white);
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+			border-radius: 5px;
+			padding: 8px;
+			margin-bottom: 8px;
+			display: grid;
+			grid-template-columns: 48px auto;
+			gap: 8px;
+
+			&-images {
+				position: relative;
+
+				&-from {
+					position: absolute;
+					border-radius: 50%;
+					height: 34px;
+					max-width: 34px;
+					visibility: hidden;
+				}
+
+				&-to {
+					position: absolute;
+					top: 30%;
+					left: 30%;
+					border-radius: 50%;
+					height: 34px;
+				}
+			}
+
+			&-content {
+				&-top {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					font-weight: 600;
+					font-size: 16px;
+					color: var(--color-charcoal);
+					margin-bottom: 8px;
+
+					&-value {
+						font-weight: 500;
+					}
+
+					&-notListed {
+						font-size: 9px;
+						font-weight: normal;
+					}
+				}
+
+				&-bottom {
+					font-weight: 500;
+					font-size: 12px;
+					color: var(--color-gray);
+					display: flex;
+					align-items: flex-end;
+					justify-content: space-between;
+
+					&-change {
+						color: var(--color-green);
+
+						&:first-child {
+							margin-right: 8px;
+						}
+
+						&--negative {
+							color: var(--color-red);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&--dark {
+		#{$self}__list-card {
+			background: var(--color-black);
+
+			&-content-top,
+			&-content-bottom {
+				color: var(--color-white);
+			}
+		}
+	}
+}
+
+.DesktopWatchlist {
+	$self: &;
+	padding: 80px;
+
+	&__header {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 16px;
+
+		&-content {
+			display: flex;
+			width: 380px;
+			align-items: center;
+			justify-content: space-between;
+			color: var(--color-primary);
+
+			&-heading {
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+	}
+
+	&__actions {
+		&-icon {
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-right: 16px;
+			}
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: auto 380px;
+		gap: 32px;
+	}
+
+	&__chart {
+		&-container {
+			background: var(--color-white);
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+			border-radius: 10px;
+		}
+	}
+
+	&__list {
+		height: 580px;
+		overflow: auto;
+
+		&-card {
+			background: var(--color-white);
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+			border-radius: 5px;
+			padding: 8px;
+			margin-bottom: 8px;
+			display: grid;
+			grid-template-columns: 48px auto;
+			gap: 8px;
+			cursor: pointer;
+
+			&-images {
+				position: relative;
+
+				&-from {
+					position: absolute;
+					border-radius: 50%;
+					height: 34px;
+					max-width: 34px;
+					visibility: hidden;
+				}
+
+				&-to {
+					position: absolute;
+					top: 30%;
+					left: 30%;
+					border-radius: 50%;
+					height: 34px;
+				}
+			}
+
+			&-content {
+				&-top {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 20px;
+					color: var(--color-charcoal);
+					margin-bottom: 12px;
+
+					&-value {
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 24px;
+					}
+
+					&-notListed {
+						font-size: 9px;
+						font-weight: normal;
+					}
+				}
+
+				&-bottom {
+					font-weight: 500;
+					font-size: 12px;
+					color: var(--color-gray);
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					&-change {
+						color: var(--color-green);
+
+						&:first-child {
+							margin-right: 8px;
+						}
+
+						&--negative {
+							color: var(--color-red);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&--dark {
+		#{$self}__chart-container {
+			background: var(--color-black);
+		}
+
+		#{$self}__list-card {
+			background: var(--color-black);
+
+			&-content-top,
+			&-content-bottom {
+				color: var(--color-white);
+			}
+		}
+	}
+}

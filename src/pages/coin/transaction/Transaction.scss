@@ -1,0 +1,81 @@
+.Transaction {
+	$self: &;
+
+	&__header {
+		height: 48px;
+		margin-bottom: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-back {
+			cursor: pointer;
+		}
+
+		&-value {
+			font-weight: 500;
+			font-size: 25px;
+
+			&--green {
+				color: var(--color-green);
+			}
+
+			&--red {
+				color: var(--color-red);
+			}
+		}
+	}
+
+	&__card {
+		background: var(--color-white);
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+		border-radius: 5px;
+		padding: 16px;
+		margin-bottom: 16px;
+
+		&-statement {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-weight: 500;
+			font-size: 14px;
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
+			&-desc {
+				margin-right: 5px;
+				color: var(--color-charcoal);
+			}
+
+			&-value {
+				color: var(--color-gray);
+				max-width: 248px;
+				text-align: end;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	&--dark {
+		color: var(--color-white);
+
+		#{$self}__header-back {
+			color: var(--color-white);
+		}
+
+		#{$self}__card {
+			background: var(--color-black);
+
+			&-statement-desc {
+				color: var(--color-white);
+			}
+
+			&-statement-value {
+				color: var(--color-white);
+			}
+		}
+	}
+}

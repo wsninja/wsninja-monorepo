@@ -1,0 +1,70 @@
+.TxnList {
+   $self: &;
+   overflow-y: auto;
+
+   &__history {
+      &-day {
+         &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 12px;
+            color: var(--color-gray);
+            margin-bottom: 8px;
+         }
+
+         &-list {
+            &-card {
+               background: var(--color-white);
+               box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+               border-radius: 5px;
+               padding: 8px;
+               margin-bottom: 8px;
+               display: grid;
+               grid-template-columns: 24px auto;
+               gap: 8px;
+               align-items: center;
+               cursor: pointer;
+
+               &-content {
+                  &-top {
+                     font-weight: 500;
+                     font-size: 14px;
+                     margin-bottom: 6px;
+                     display: flex;
+                     align-items: center;
+                     justify-content: space-between;
+                  }
+
+                  &-bottom {
+                     font-weight: 500;
+                     font-size: 12px;
+                     color: var(--color-gray);
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &--dark {
+      #{$self}__history-day {
+         &-header {
+            color: var(--color-white);
+         }
+
+         &-list-card {
+            background: var(--color-charcoal);
+
+            &-content {
+               color: var(--color-white);
+
+               &-bottom {
+                  color: var(--color-white);
+               }
+            }
+         }
+      }
+   }
+}

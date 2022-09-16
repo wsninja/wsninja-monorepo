@@ -1,0 +1,55 @@
+.CoinsList {
+   $self: &;
+   margin-bottom: 48px;
+   background: var(--color-white);
+
+   &--popover {
+      padding: 16px;
+      border-radius: 4px;
+      max-height: 400px;
+      overflow-y: auto;
+      border: 1px solid var(--color-gray);
+   }
+
+   &__coin {
+      display: grid;
+      grid-template-columns: 32px auto auto;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 8px;
+      cursor: pointer;
+
+      &-image {
+         width: 32px;
+         height: 32px;
+         object-fit: cover;
+         border-radius: 16px;
+      }
+
+      &-unit {
+         font-weight: 600;
+         font-size: 14px;
+         color: var(--color-charcoal);
+      }
+
+      &-name {
+         font-weight: 500;
+         font-size: 14px;
+         color: var(--color-charcoal);
+         text-align: right;
+      }
+   }
+
+   &--dark {
+      background: var(--color-charcoal);
+      color: var(--color-white);
+
+      #{$self}__coin {
+         &-unit,
+         &-name {
+            color: var(--color-white);
+         }
+      }
+   }
+}

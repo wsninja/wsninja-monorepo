@@ -1,0 +1,36 @@
+.InputGroup {
+   &__label {
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--color-gray);
+      margin-bottom: 4px;
+   }
+
+   &__wrapper {
+      border: 1px solid var(--color-light-gray);
+      border-radius: 4px;
+      background: var(--color-white);
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+
+      &--dark {
+         background: var(--color-charcoal);
+         border-color: var(--color-gray);
+      }
+
+      &-input {
+         background: transparent;
+         border: none;
+         padding: 0;
+         width: 100%;
+         margin-right: 12px;
+         outline: none;
+
+         &--dark {
+            background: var(--color-charcoal);
+            color: var(--color-white);
+         }
+      }
+   }
+}

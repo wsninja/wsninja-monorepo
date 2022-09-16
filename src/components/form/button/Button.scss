@@ -1,0 +1,98 @@
+.Button {
+	$self: &;
+	background: transparent;
+	border: 1px solid var(--color-black);
+	color: var(--color-black);
+	padding: 6px 12px;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 600;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&--full {
+		width: 100%;
+	}
+
+	&--solid {
+		color: var(--color-white);
+
+		&#{$self}--primary {
+			background: var(--color-primary);
+			border-color: var(--color-primary);
+		}
+
+		&#{$self}--secondary {
+			background: var(--color-black);
+			border-color: var(--color-black);
+		}
+	}
+
+	&--outline {
+		background: none;
+
+		&#{$self}--primary {
+			color: var(--color-primary);
+			border-color: var(--color-primary);
+		}
+
+		&#{$self}--secondary {
+			color: var(--color-black);
+			border-color: var(--color-black);
+		}
+	}
+
+	&--ghost {
+		background: none;
+		border: none;
+
+		&#{$self}--primary {
+			color: var(--color-primary);
+		}
+
+		&#{$self}--secondary {
+			color: var(--color-black);
+		}
+	}
+
+	&--lg {
+		padding: 8px 12px;
+		font-size: 20px;
+		font-weight: 600;
+		height: 41px;
+	}
+
+	&--dark {
+		color: var(--color-white);
+		border-color: var(--color-white);
+
+		&#{$self}--outline {
+			background: none;
+
+			&#{$self}--primary {
+				color: var(--color-white);
+				border-color: var(--color-white);
+			}
+
+			&#{$self}--secondary {
+				color: var(--color-white);
+				border-color: var(--color-white);
+			}
+		}
+
+		&#{$self}--ghost {
+			background: none;
+			border: none;
+
+			&#{$self}--primary {
+				color: var(--color-primary);
+			}
+
+			&#{$self}--secondary {
+				color: var(--color-black);
+			}
+		}
+	}
+}

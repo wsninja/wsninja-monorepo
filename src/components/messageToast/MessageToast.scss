@@ -1,0 +1,34 @@
+.MessageToast {
+	$self: &;
+	display: grid;
+	grid-template-columns: 32px auto;
+	gap: 8px;
+	min-width: 380px;
+
+	img {
+		align-self: center;
+	}
+
+	&__heading {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 18px;
+		color: var(--color-charcoal);
+	}
+
+	&__message {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		color: var(--color-gray);
+	}
+
+	&--dark {
+		background: var(--color-black);
+
+		#{$self}__message,
+		#{$self}__heading {
+			color: var(--color-white);
+		}
+	}
+}

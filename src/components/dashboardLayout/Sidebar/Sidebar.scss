@@ -1,0 +1,50 @@
+.Sidebar {
+   $self: &;
+   position: fixed;
+   top: 48px;
+   right: -320px;
+   background: var(--color-white);
+   height: calc(100vh - 48px);
+   min-width: 220px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   transition: 0.2s ease right;
+   box-shadow: -2px 5px 8px 1px #efefef;
+
+   &--open {
+      right: 0;
+   }
+
+   &__list {
+      list-style-type: none;
+      width: 100%;
+
+      &-item {
+         border-bottom: 1px solid #ececec;
+
+         &-link {
+            padding: 0 20px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            color: var(--color-black);
+            text-decoration: none;
+
+            span {
+               margin-right: 8px;
+            }
+         }
+      }
+   }
+
+   &--dark {
+      background: var(--color-charcoal);
+      box-shadow: none;
+
+      #{$self}__list-item-link {
+         color: var(--color-white);
+      }
+   }
+}

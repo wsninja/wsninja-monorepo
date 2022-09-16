@@ -1,0 +1,90 @@
+.ReceiveCoin {
+   $self: &;
+
+   &__header {
+      display: flex;
+      align-items: center;
+      height: 48px;
+      margin-bottom: 32px;
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--color-charcoal);
+
+      &-back {
+         cursor: pointer;
+         margin-right: 8px;
+      }
+   }
+
+   &__card {
+      background: var(--color-white);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      padding: 16px;
+      margin: 0 auto;
+      margin-bottom: 32px;
+      text-align: center;
+
+      &-title {
+         color: var(--color-primary);
+         font-weight: 600;
+         font-size: 16px;
+         margin-bottom: 20px;
+      }
+
+      &-qr {
+         margin-bottom: 20px;
+      }
+
+      &-code {
+         font-weight: 500;
+         font-size: 12px;
+         color: var(--color-gray);
+      }
+   }
+
+   &__warning {
+      font-weight: 500;
+      font-size: 12px;
+      color: var(--color-gray);
+      margin-bottom: 32px;
+      text-align: center;
+
+      &-unit {
+         color: var(--color-primary);
+         font-weight: 600;
+      }
+   }
+
+   &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-icon {
+         &:not(:last-child) {
+            margin-right: 16px;
+         }
+      }
+   }
+
+   &--dark {
+      color: var(--color-white);
+
+      #{$self}__header {
+         color: var(--color-white);
+      }
+
+      #{$self}__card {
+         background: var(--color-black);
+
+         &-code {
+            color: var(--color-white);
+         }
+      }
+
+      #{$self}__warning {
+         color: var(--color-white);
+      }
+   }
+}

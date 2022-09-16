@@ -1,0 +1,137 @@
+.Artwork {
+   $self: &;
+
+   &__header {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      margin-bottom: 16px;
+
+      &-back {
+         cursor: pointer;
+         margin-right: 8px;
+      }
+   }
+
+   &__img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 16px;
+   }
+
+   &__price {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 14px;
+      font-weight: 500;
+
+      &-value {
+         font-size: 18px;
+      }
+   }
+
+   &__cta {
+      width: 220px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+
+      &-icon {
+         margin-right: 8px;
+      }
+   }
+
+   &__name {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+   }
+
+   &__description {
+      font-size: 12px;
+      color: var(--color-gray);
+      font-weight: 500;
+   }
+
+   &--dark {
+      color: var(--color-white);
+
+      #{$self}__header-back {
+         color: var(--color-white);
+      }
+
+      #{$self}__description {
+         color: var(--color-white);
+      }
+   }
+}
+
+.DesktopArtwork {
+   $self: &;
+
+   &__header {
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-icon {
+         cursor: pointer;
+      }
+   }
+
+   &__grid {
+      display: flex;
+      margin-bottom: 32px;
+
+      &-left {
+         margin-right: 32px;
+      }
+
+      &-right {
+         &-name {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: var(--color-black);
+            margin-bottom: 24px;
+         }
+
+         &-desc {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 153.2%;
+            color: var(--color-gray);
+         }
+      }
+   }
+
+   &__bid {
+      color: var(--color-black);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 24px;
+   }
+
+   &__cta {
+      min-width: 200px;
+   }
+
+   &--dark {
+      #{$self}__header {
+         color: var(--color-white);
+      }
+
+      #{$self}__grid-right-name,
+      #{$self}__grid-right-desc,
+      #{$self}__bid {
+         color: var(--color-white);
+      }
+   }
+}

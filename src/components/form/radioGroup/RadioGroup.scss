@@ -1,0 +1,34 @@
+.RadioGroup {
+   $self: &;
+   display: flex;
+   align-items: center;
+   width: 100%;
+
+   &__tab {
+      padding: 12px;
+      background: var(--color-ultra-gray);
+      cursor: pointer;
+      flex: 1;
+      text-align: center;
+
+      &:first-child {
+         border-top-left-radius: 5px;
+         border-bottom-left-radius: 5px;
+      }
+
+      &:last-child {
+         border-top-right-radius: 5px;
+         border-bottom-right-radius: 5px;
+      }
+
+      &--active {
+         color: var(--color-primary);
+      }
+   }
+
+   &--dark {
+      #{$self}__tab {
+         background: var(--color-charcoal);
+      }
+   }
+}

@@ -1,0 +1,95 @@
+.Artworks {
+   $self: &;
+
+   &__header {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-charcoal);
+
+      &-back {
+         cursor: pointer;
+         margin-right: 8px;
+      }
+   }
+
+   &__main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 8px;
+
+      &-card {
+         background: var(--color-white);
+         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+         border-radius: 5px;
+         padding: 4px;
+         cursor: pointer;
+
+         &-img {
+            border-radius: 3px;
+            width: 100%;
+            height: auto;
+         }
+
+         &-name {
+            color: var(--color-charcoal);
+            font-weight: 500;
+            font-size: 10px;
+         }
+      }
+   }
+
+   &--dark {
+      #{$self}__header-back {
+         color: var(--color-white);
+      }
+
+      #{$self}__main-card {
+         background: var(--color-black);
+
+         &-name {
+            color: var(--color-white);
+         }
+      }
+   }
+}
+
+.DesktopArtworks {
+   $self: &;
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   gap: 24px;
+
+   &__card {
+      background: var(--color-white);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      padding: 4px;
+      cursor: pointer;
+
+      &-img {
+         border-radius: 3px;
+         width: 100%;
+         height: auto;
+      }
+
+      &-name {
+         color: var(--color-charcoal);
+         font-weight: 500;
+         font-size: 14px;
+         line-height: 17px;
+      }
+   }
+
+   &--dark {
+      #{$self}__card {
+         background: var(--color-charcoal);
+
+         &-name {
+            color: var(--color-white);
+         }
+      }
+   }
+}

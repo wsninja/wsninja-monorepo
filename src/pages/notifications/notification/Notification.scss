@@ -1,0 +1,35 @@
+.Notification {
+	$self: &;
+	padding: 40px 20px;
+	background: url('../../../assets/images/full-bg.svg');
+	background-repeat: repeat-y;
+	background-size: cover;
+	min-height: 100vh;
+
+	&__top {
+		margin-bottom: 32px;
+		display: flex;
+		align-items: center;
+		font-weight: 700;
+		font-family: 'Roboto', sans-serif;
+		color: var(--color-black);
+
+		&-icon {
+			margin-right: 8px;
+			cursor: pointer;
+		}
+	}
+
+	&__description {
+		word-break: break-all;
+	}
+
+	&--dark {
+		background: var(--color-black);
+		color: var(--color-white);
+
+		#{$self}__top-icon {
+			color: var(--color-white);
+		}
+	}
+}
