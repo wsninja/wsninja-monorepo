@@ -20,8 +20,10 @@ jobs:
     name: Upload env
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
+    - name: Repository checkout
+      uses: actions/checkout@v2
+    - name: Connects to VPS via SSH
+      uses: appleboy/ssh-action@v0.1.3
       env:
         FOO: "HERE"
       with:
