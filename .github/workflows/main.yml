@@ -23,14 +23,14 @@ jobs:
     - name: Repository checkout
       uses: actions/checkout@v2
     - name: Connects to VPS via SSH
-      uses: appleboy/ssh-action@v0.0.7
+      uses: garygrossgarten/github-action-ssh@release
       env:
         FOO: "HERE"
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+        privateKey: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        script: |
+        command: |
           echo "I am $FOO"
