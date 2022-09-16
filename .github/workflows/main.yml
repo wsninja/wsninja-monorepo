@@ -23,7 +23,7 @@ jobs:
     - name: Repository checkout
       uses: actions/checkout@v2
     - name: Connects to VPS via SSH
-      uses: appleboy/ssh-action@v0.1.5
+      uses: appleboy/ssh-action@v0.0.7
       env:
         FOO: "HERE"
       with:
